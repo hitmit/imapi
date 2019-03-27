@@ -1,0 +1,37 @@
+{
+  "app": {
+    "title": "SEAN.JS",
+    "description": "Full-Stack Javascript with SequelizeJS, ExpressJS, AngularJS, and Node.js",
+    "keywords": "sequelizejs, expressjs, angularjs, nodejs, postgresql, mysql, sqlite3, passport, redis, socket.io",
+    "googleAnalyticsTrackingID": "",
+    "port":3000,
+    "sessionCookie": {
+      "maxAge": 86400000,
+      "httpOnly": true,
+      "secure": true
+    }
+  },
+  "db": {
+    "development": {
+      "username": "root",
+      "password": "root",
+      "database": "forge",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "",
+      "password": null,
+      "database": "",
+      "host": "",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "",
+      "password": null,
+      "database": "",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    }
+  }
+}
