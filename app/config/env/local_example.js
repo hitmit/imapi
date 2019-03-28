@@ -8,21 +8,15 @@ var defaultEnvConfig = require('./default');
 
 module.exports = {
   db: {
-    name: process.env.DB_NAME || "seanjs_dev",
+    name: process.env.DB_NAME || "dbname",
     host: process.env.DB_HOST || "localhost",
-    port: process.env.DB_PORT || 5432,
-    username: process.env.DB_USERNAME || "postgres",
-    password: process.env.DB_PASSWORD || "postgres",
-    dialect: process.env.DB_DIALECT || "postgres", //mysql, postgres, sqlite3,...
+    port: process.env.DB_PORT || 3306,
+    username: process.env.DB_USERNAME || "dbuser",
+    password: process.env.DB_PASSWORD || "dbpass",
+    dialect: process.env.DB_DIALECT || "mysql", //mysql, postgres, sqlite3,...
     enableSequelizeLog: process.env.DB_LOG || false,
     ssl: process.env.DB_SSL || false,
     sync: process.env.DB_SYNC || true //Synchronizing any model changes with database
-  },
-  redis: {
-    host: process.env.REDIS_HOST || "localhost",
-    port: process.env.REDIS_PORT || 6379,
-    database: process.env.REDIS_DATABASE || 0,
-    password: process.env.REDIS_PASSWORD || "",
   },
   log: {
     // Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
@@ -35,37 +29,6 @@ module.exports = {
   },
   app: {
     title: defaultEnvConfig.app.title + ' - Local Environment'
-  },
-  facebook: {
-    clientID: process.env.FACEBOOK_ID || 'APP_ID',
-    clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
-    callbackURL: '/api/auth/facebook/callback'
-  },
-  twitter: {
-    clientID: process.env.TWITTER_KEY || 'CONSUMER_KEY',
-    clientSecret: process.env.TWITTER_SECRET || 'CONSUMER_SECRET',
-    callbackURL: '/api/auth/twitter/callback'
-  },
-  google: {
-    clientID: process.env.GOOGLE_ID || 'APP_ID',
-    clientSecret: process.env.GOOGLE_SECRET || 'APP_SECRET',
-    callbackURL: '/api/auth/google/callback'
-  },
-  linkedin: {
-    clientID: process.env.LINKEDIN_ID || 'APP_ID',
-    clientSecret: process.env.LINKEDIN_SECRET || 'APP_SECRET',
-    callbackURL: '/api/auth/linkedin/callback'
-  },
-  github: {
-    clientID: process.env.GITHUB_ID || 'APP_ID',
-    clientSecret: process.env.GITHUB_SECRET || 'APP_SECRET',
-    callbackURL: '/api/auth/github/callback'
-  },
-  paypal: {
-    clientID: process.env.PAYPAL_ID || 'CLIENT_ID',
-    clientSecret: process.env.PAYPAL_SECRET || 'CLIENT_SECRET',
-    callbackURL: '/api/auth/paypal/callback',
-    sandbox: true
   },
   mailer: {
     from: process.env.MAILER_FROM || 'MAILER_FROM',
