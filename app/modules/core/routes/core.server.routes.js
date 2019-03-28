@@ -13,6 +13,4 @@ module.exports = function(app) {
   // Define application route
   app.route('/*').get(core.renderIndex);
 
-  //Submit contact form data
-  app.route('/api/contact').post(core.contact);
 };
